@@ -2,20 +2,34 @@ import { group } from "d3-array";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
 
-export const drawBar = async (incomingData) => {
+export const drawBar = async (incomingData, type) => {
     const data = await incomingData;
-    const height = 500;
-    const width = 500;
+    console.log(data);
+    if (data.length < 1) {
+        return null;
+    }
+
+    d3.select(".graphs")
+      .append("svg")
+      .attr("width", "500")
+      .attr("height", "500")
+      .attr("class", `${type}`)
+
+
     const margin = {
         top: 10,
-        right: 10,
-        bottom: 20,
-        left: 20
+        right: 80,
+        bottom: 100,
+        left: 50
     };
-    const keys = data.columns.slice(1);
+    const height = 500;
+    const width = 500;
+    const keys = data.columns.slice(1, data.columns.length - 1);
     const groupKey = data.columns[0];
-    const color = d3.scaleOrdinal()
-            .range(["#b81f1f", "#1e20ba", "#b8571f", "#1fb836"])
+    const color = d3
+      .scaleOrdinal()
+      .range(["#DA291C", "#0033A0", "#A77BCA", "#FFC600"]);
+
     const yAx = (g) => g
             .attr("transform", `translate(${margin.left},0)`)
             .call(d3.axisLeft(y).ticks(null, "s"))
@@ -35,15 +49,16 @@ export const drawBar = async (incomingData) => {
         .domain([0, d3.max(data, d => d3.max(keys, key => d[key]))]).nice()
         .rangeRound([height - margin.bottom, margin.top])
 
+
     const x0 = d3.scaleBand()
         .domain(data.map(d => d[groupKey]))
         .rangeRound([margin.left, width - margin.right])
-        .paddingInner(0.1)
+        .padding(.2)
 
     const x1 = d3.scaleBand()
         .domain(keys)
         .rangeRound([0, x0.bandwidth()])
-        .padding(0.05)
+        .padding(0)
 
     const legend = (svg) => {
         const g = svg
@@ -69,8 +84,7 @@ export const drawBar = async (incomingData) => {
             .text(d => d);
     }
 
-    const svg = d3.select("svg");
-    console.log(svg)
+    const svg = d3.select(`.${type}`);
     svg.append("g")
         .selectAll("g")
         .data(data)
@@ -83,7 +97,9 @@ export const drawBar = async (incomingData) => {
         .attr("y", d => y(d.value))
         .attr("width", x1.bandwidth())
         .attr("height", d => y(0) - y(d.value))
-        .attr("fill", d => color(d.key));
+        .attr("fill", d => color(d.key))
+        .attr("class", "bar")
+        .append("title").text(d => d.value);
 
     svg.append("g")
         .call(xAx);
@@ -94,7 +110,5 @@ export const drawBar = async (incomingData) => {
     svg.append("g")
         .call(legend);
 
-
-    // console.log(yAx);
 
 }
