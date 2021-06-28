@@ -1,0 +1,233 @@
+{
+    "McDonalds": {
+        "USA": {
+            "Small Fries": {
+                "protein": 3,
+                "fat": 11,
+                "carbs": 29,
+                "calories": 230
+            },
+            "Medium Fries": {
+                "protein": 4,
+                "fat": 19,
+                "carbs": 48,
+                "calories": 380
+            },
+            "Large Fries": {
+                "protein": 6,
+                "fat": 25,
+                "carbs": 63,
+                "calories": 500
+            },
+            "Small Coke": {
+                "calories": 150,
+                "sugar": 40
+            },
+            "Medium Coke": {
+                "calories": 210,
+                "sugar": 58
+            },
+            "Large Coke": {
+                "calories": 310,
+                "sugar": 86
+            },
+            "Big Mac": {
+                "protein": 25,
+                "fat": 29,
+                "sugar": 9,
+                "carbs": 45,
+                "calories": 540
+            },
+            "Small McNuggets": {
+                "calories": 190,
+                "fat": 12,
+                "carbs": 12,
+                "protein": 9
+            },
+            "Medium McNuggets": {
+                "calories": 280,
+                "fat": 18,
+                "carbs": 18,
+                "protein": 13
+            },
+            "Large McNuggets": {
+                "calories": 470,
+                "fat": 30,
+                "carbs": 30,
+                "protein": 22
+            }
+        },
+        "UK": {
+            "Small Fries": {
+                "protein": 2,
+                "fat": 12,
+                "carbs": 29,
+                "calories": 237
+            },
+            "Medium Fries": {
+                "protein": 3,
+                "fat": 17,
+                "carbs": 42,
+                "calories": 337
+            },
+            "Large Fries": {
+                "protein": 4,
+                "fat": 22,
+                "carbs": 55,
+                "calories": 444
+            },
+            "Small Coke": {
+                "calories": 105,
+                "sugar": 26
+            },
+            "Medium Coke": {
+                "calories": 170,
+                "sugar": 42
+            },
+            "Large Coke": {
+                "calories": 210,
+                "sugar": 53
+            },
+            "Big Mac": {
+                "protein": 26,
+                "fat": 25,
+                "sugar": 9,
+                "carbs": 43,
+                "calories": 508
+            },
+            "Small McNuggets": {
+                "calories": 259,
+                "fat": 13,
+                "carbs": 18,
+                "protein": 16
+            },
+            "Medium McNuggets": {
+                "calories": 388,
+                "fat": 20,
+                "carbs": 28,
+                "protein": 24
+            },
+            "Large McNuggets": {
+                "calories": 432,
+                "fat": 23,
+                "carbs": 31,
+                "protein": 27
+            }
+        },
+        "Australia": {
+            "Small Fries": {
+                "protein": 3,
+                "fat": 10,
+                "carbs": 23,
+                "calories": 206
+            },
+            "Medium Fries": {
+                "protein": 5,
+                "fat": 15,
+                "carbs": 34,
+                "calories": 297
+            },
+            "Large Fries": {
+                "protein": 6,
+                "fat": 18,
+                "carbs": 42,
+                "calories": 366
+            },
+            "Small Coke": {
+                "calories": 102,
+                "sugar": 25
+            },
+            "Medium Coke": {
+                "calories": 146,
+                "sugar": 36
+            },
+            "Large Coke": {
+                "calories": 224,
+                "sugar": 55
+            },
+            "Big Mac": {
+                "protein": 27,
+                "fat": 31,
+                "sugar": 7,
+                "carbs": 42,
+                "calories": 564
+            },
+            "Small McNuggets": {
+                "calories": 130,
+                "fat": 8,
+                "carbs": 7,
+                "protein": 8
+            },
+            "Medium McNuggets": {
+                "calories": 260,
+                "fat": 16,
+                "carbs": 15,
+                "protein": 15
+            },
+            "Large McNuggets": {
+                "calories": 432,
+                "fat": 26,
+                "carbs": 24,
+                "protein": 26
+            }
+        },
+        "Spain": {
+            "Small Fries": {
+                "protein": 3,
+                "fat": 10,
+                "carbs": 29,
+                "calories": 220
+            },
+            "Medium Fries": {
+                "protein": 5,
+                "fat": 15,
+                "carbs": 43,
+                "calories": 320
+            },
+            "Large Fries": {
+                "protein": 7,
+                "fat": 23,
+                "carbs": 66,
+                "calories": 490
+            },
+            "Small Coke": {
+                "calories": 150,
+                "sugar": 39
+            },
+            "Medium Coke": {
+                "calories": 210,
+                "sugar": 56
+            },
+            "Large Coke": {
+                "calories": 290,
+                "sugar": 77
+            },
+            "Big Mac": {
+                "protein": 25,
+                "fat": 30,
+                "sugar": 9,
+                "carbs": 45,
+                "calories": 550
+            },
+            "Small McNuggets": {
+                "calories": 170,
+                "fat": 10,
+                "carbs": 10,
+                "protein": 9
+            },
+            "Medium McNuggets": {
+                "calories": 250,
+                "fat": 15,
+                "carbs": 15,
+                "protein": 14
+            },
+            "Large McNuggets": {
+                "calories": 420,
+                "fat": 25,
+                "carbs": 25,
+                "protein": 23
+            }
+        }
+    }
+}
+
