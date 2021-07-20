@@ -3,20 +3,25 @@ import * as d3 from 'd3';
 import { drawBar } from "./barGraph";
 
 export const calories = d3.csv(
-	"https://gist.githubusercontent.com/fullernle/1b158c1a57cc21c7df4a8d46c7564834/raw/6c2566ddeb451d446e5ee54555fb8f12879f5fb7/calories.csv",
-	d3.autoType);
+  "https://gist.githubusercontent.com/patschramm/070a8fdc3dfc56f648e433f7fba19277/raw/eea158a9b4d9dd21f274d4222e5f4190a21eaa59/mcdonaldscalories.csv",
+  d3.autoType
+);
 export const carbs = d3.csv(
-	"https://gist.githubusercontent.com/fullernle/1b158c1a57cc21c7df4a8d46c7564834/raw/9f9c064e01a1d4bc30b39a86e4c72ecd3cb86d62/carbs.csv",
-	d3.autoType);
+  "https://gist.githubusercontent.com/patschramm/61d0b20977ba26e8ccce5f4d645a5929/raw/2708361175212c19212df3df2303a047c88d5110/mcdonaldscarbs.csv",
+  d3.autoType
+);
 export const fat = d3.csv(
-	"https://gist.githubusercontent.com/fullernle/1b158c1a57cc21c7df4a8d46c7564834/raw/6c2566ddeb451d446e5ee54555fb8f12879f5fb7/fat.csv",
-	d3.autoType);
+  "https://gist.githubusercontent.com/patschramm/82bfd90896b54baca1e5c633390099d3/raw/d7c39be3b52f7a6bf6b02c55b836e5f7a552d7e3/mcdonaldsfat.csv",
+  d3.autoType
+);
 export const protein = d3.csv(
-	"https://gist.githubusercontent.com/fullernle/1b158c1a57cc21c7df4a8d46c7564834/raw/6c2566ddeb451d446e5ee54555fb8f12879f5fb7/protein.csv",
-	d3.autoType);
+  "https://gist.githubusercontent.com/patschramm/ba4b381675340addca4c52c137e5ffc1/raw/d24dc1ad56e94d01716afe2bc499a75c4ee5e238/mcdonaldsprotein.csv",
+  d3.autoType
+);
 export const sugar = d3.csv(
-	"https://gist.githubusercontent.com/fullernle/1b158c1a57cc21c7df4a8d46c7564834/raw/6c2566ddeb451d446e5ee54555fb8f12879f5fb7/sugar.csv",
-	d3.autoType);
+  "https://gist.githubusercontent.com/patschramm/b99863b2bd832c2fbeb06ee35156b93a/raw/1dc475d54118b2ccb08324bfadedd4be2bd4a78f/mcdonaldssugar.csv",
+  d3.autoType
+);
 
 
 const filterFood = async (dataSet, drinkData, sideData, entreeData) => {
