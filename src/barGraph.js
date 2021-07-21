@@ -4,7 +4,6 @@ import * as d3 from "d3";
 
 export const drawBar = async (incomingData, type) => {
     const data = await incomingData;
-    console.log(data);
     if (data.length < 1) {
         return null;
     }
