@@ -48,10 +48,14 @@ const render = (dataSet, drinkData = [], sideData = [], entreeData = []) => {
   });
 };
 
+const placeHeader = document.querySelector(".place-header");
+
 const mcdonalds = document.querySelector(".mc");
 const bk = document.querySelector(".bk");
 
 mcdonalds.addEventListener("click", () => {
+	resetGraphs();
+	placeHeader.textContent = "McDonald's"
 	console.log("calories", calories)
 	calories = d3.csv(
     "https://gist.githubusercontent.com/patschramm/070a8fdc3dfc56f648e433f7fba19277/raw/eea158a9b4d9dd21f274d4222e5f4190a21eaa59/mcdonaldscalories.csv",
@@ -79,12 +83,42 @@ mcdonalds.addEventListener("click", () => {
   );
 })
 
+bk.addEventListener("click", () => {
+	resetGraphs();
+	placeHeader.textContent = "Booger King"
+  console.log("calories", calories);
+  calories = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/e207311e84425e69dec8dede08ef11f6/raw/faa529de3b994a076d69332c9be68b3f5ffb848f/bkcalories.csv",
+    d3.autoType
+  );
+
+  carbs = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/5c9c9f3a41606518310408255b9a2396/raw/2b92fb41903a5f5890d7712960c15b7e560b3ede/bkcarbs.csv",
+    d3.autoType
+  );
+
+  fat = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/b0631893f06080ace6922a5c801bd9a9/raw/c4a4df7f06f18a045180f6ab93a910232b65067d/bkfat.csv",
+    d3.autoType
+  );
+
+  protein = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/665bcfd84f2fb5fb390ff4e53782457c/raw/a9730d2f9869e1e2c9d49cc9ecb7e8f75e50424b/bkprotein.csv",
+    d3.autoType
+  );
+
+  sugar = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/2001665bd5545c3221fe7821b75f3054/raw/bf672e70db5d7181f1d3a00df0c4f854d828a5fb/bksugar.csv",
+    d3.autoType
+  );
+});
+
 const calDrop = document.createElement("a");
 const carbDrop = document.createElement("a");
 const fatDrop = document.createElement("a");
 const proDrop = document.createElement("a");
 const sugDrop = document.createElement("a");
-console.log("outside calories", calories)
+
 calDrop.addEventListener("click", () => render(calories));
 carbDrop.addEventListener("click", () => render(carbs));
 fatDrop.addEventListener("click", () => render(fat));

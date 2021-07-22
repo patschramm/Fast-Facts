@@ -51,3 +51,8 @@ rect:hover {
   width: 100px;
   height: 100px;
 }
+
+.logo:hover {
+  cursor: pointer;
+  opacity: .8;
+}
