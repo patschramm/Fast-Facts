@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./src/styles/index.css" />
     <title>Fast Facts</title>
-</head>
+  </head>
 
-<body>
-    <div class="navbar">
-        <img src="./src/images/mclogo1.png" alt="McDonalds Logo" class="mc logo">
-        <img src="./src/images/bklogo.png" alt="Burger King Logo" class="bk logo">
-        <img src="./src/images/taco2.png" alt="Taco Bell Logo" class="tb logo">
-        <img src="./src/images/KFC_logo.png" alt="KFC Logo" class="kfc logo">
-        <img src="./src/images/jib.png" alt="Jack In The Box Logo" class="jib logo">
+  <body>
+    <div class="navbar-wrapper">
+      <div class="navbar">
+        <div class="main-logo">Fast Facts</div>
+
+        <div class="logos-wrapper">
+          <div class="logo-wrapper">
+            <img
+              src="./src/images/mclogo1.png"
+              alt="McDonalds Logo"
+              class="mc logo"
+            />
+          </div>
+
+          <div class="logo-wrapper">
+            <img
+              src="./src/images/bklogo.png"
+              alt="Burger King Logo"
+              class="bk logo"
+            />
+          </div>
+
+          <div class="logo-wrapper">
+            <img
+              src="./src/images/taco2.png"
+              alt="Taco Bell Logo"
+              class="tb logo"
+            />
+          </div>
+
+          <div class="logo-wrapper">
+            <img
+              src="./src/images/KFC_logo.png"
+              alt="KFC Logo"
+              class="kfc logo"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
     <h1 class="place-header"></h1>
-    <div class="graph-wrapper">
-        <div class="dropdown">
-            <button class="dropbtn">Nutritional Information</button>
-            <div class="dropdown-content">
-            </div>
-        </div>
+    <div class="dd-positioner">
+      <div class="dropdown">
+        <button class="dropbtn">Nutritional Information</button>
+        <div class="dropdown-content"></div>
+      </div>
+    </div>
 
-        <!-- <div class="graphs">
+    <div class="graph-wrapper">
+      <!-- <div class="graphs">
 
         </div> -->
     </div>
 
-    
     <script src="./dist/main.js"></script>
-</body>
-
+  </body>
 </html>
-
