@@ -8,8 +8,6 @@ export let fat;
 export let protein;
 export let sugar;
 
-
-
 export const filterFood = async (dataSet, drinkData, sideData, entreeData) => {
   const data = await dataSet;
 
@@ -40,7 +38,12 @@ export const resetGraphs = () => {
   graphWrapper.append(newGraphs);
 };
 
-export const render = (dataSet, drinkData = [], sideData = [], entreeData = []) => {
+export const render = (
+  dataSet,
+  drinkData = [],
+  sideData = [],
+  entreeData = []
+) => {
   resetGraphs();
   filterFood(dataSet, drinkData, sideData, entreeData).then(() => {
     drawBar(drinkData, "drink");
@@ -49,47 +52,50 @@ export const render = (dataSet, drinkData = [], sideData = [], entreeData = []) 
   });
 };
 
-
-
 const placeHeader = document.querySelector(".place-header");
 
 const mcdonalds = document.querySelector(".mc");
 const bk = document.querySelector(".bk");
 const tb = document.querySelector(".tb");
 const kfc = document.querySelector(".kfc");
+const dropdown = document.querySelector(".dd-positioner");
 
 mcdonalds.addEventListener("click", () => {
-	resetGraphs();
-	placeHeader.textContent = "McDonald's"
-	calories = d3.csv(
+  resetGraphs();
+  dropdown.classList.remove("hidden");
+  instructions.classList.add("hidden");
+  placeHeader.textContent = "McDonald's";
+  calories = d3.csv(
     "https://gist.githubusercontent.com/patschramm/070a8fdc3dfc56f648e433f7fba19277/raw/eea158a9b4d9dd21f274d4222e5f4190a21eaa59/mcdonaldscalories.csv",
     d3.autoType
   );
 
-	carbs = d3.csv(
+  carbs = d3.csv(
     "https://gist.githubusercontent.com/patschramm/61d0b20977ba26e8ccce5f4d645a5929/raw/2708361175212c19212df3df2303a047c88d5110/mcdonaldscarbs.csv",
     d3.autoType
   );
 
-	fat = d3.csv(
+  fat = d3.csv(
     "https://gist.githubusercontent.com/patschramm/82bfd90896b54baca1e5c633390099d3/raw/d7c39be3b52f7a6bf6b02c55b836e5f7a552d7e3/mcdonaldsfat.csv",
     d3.autoType
   );
 
-	protein = d3.csv(
+  protein = d3.csv(
     "https://gist.githubusercontent.com/patschramm/ba4b381675340addca4c52c137e5ffc1/raw/d24dc1ad56e94d01716afe2bc499a75c4ee5e238/mcdonaldsprotein.csv",
     d3.autoType
   );
 
-	sugar = d3.csv(
+  sugar = d3.csv(
     "https://gist.githubusercontent.com/patschramm/b99863b2bd832c2fbeb06ee35156b93a/raw/1dc475d54118b2ccb08324bfadedd4be2bd4a78f/mcdonaldssugar.csv",
     d3.autoType
   );
-})
+});
 
 bk.addEventListener("click", () => {
-	resetGraphs();
-	placeHeader.textContent = "Burger King"
+  resetGraphs();
+  dropdown.classList.remove("hidden");
+  instructions.classList.add("hidden");
+  placeHeader.textContent = "Burger King";
   calories = d3.csv(
     "https://gist.githubusercontent.com/patschramm/e207311e84425e69dec8dede08ef11f6/raw/faa529de3b994a076d69332c9be68b3f5ffb848f/bkcalories.csv",
     d3.autoType
@@ -118,6 +124,8 @@ bk.addEventListener("click", () => {
 
 tb.addEventListener("click", () => {
   resetGraphs();
+  dropdown.classList.remove("hidden");
+  instructions.classList.add("hidden");
   placeHeader.textContent = "Taco Bell";
   calories = d3.csv(
     "https://gist.githubusercontent.com/patschramm/f3c610960b55916d80404074f99b01d8/raw/d074278cf46633a35ae83f1677763a8636d4adf6/tbcalories.csv",
@@ -147,34 +155,19 @@ tb.addEventListener("click", () => {
 
 kfc.addEventListener("click", () => {
   resetGraphs();
+  dropdown.classList.remove("hidden");
+  instructions.classList.add("hidden");
   placeHeader.textContent = "Kentucky Fried Chicken";
-  calories = d3.csv(
-    "",
-    d3.autoType
-  );
+  calories = d3.csv("", d3.autoType);
 
-  carbs = d3.csv(
-    "",
-    d3.autoType
-  );
+  carbs = d3.csv("", d3.autoType);
 
-  fat = d3.csv(
-    "",
-    d3.autoType
-  );
+  fat = d3.csv("", d3.autoType);
 
-  protein = d3.csv(
-    "",
-    d3.autoType
-  );
+  protein = d3.csv("", d3.autoType);
 
-  sugar = d3.csv(
-    "",
-    d3.autoType
-  );
+  sugar = d3.csv("", d3.autoType);
 });
-
-
 
 const calDrop = document.createElement("a");
 const carbDrop = document.createElement("a");
@@ -201,3 +194,17 @@ ddContent.append(carbDrop);
 ddContent.append(fatDrop);
 ddContent.append(proDrop);
 ddContent.append(sugDrop);
+
+const home = document.querySelector(".main-logo");
+const instructions = document.querySelector(".instructions");
+
+home.addEventListener("click", () => {
+  resetGraphs();
+  dropdown.classList.add("hidden");
+  placeHeader.textContent = "";
+  instructions.classList.remove("hidden");
+  
+
+
+
+});

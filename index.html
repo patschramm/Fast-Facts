@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <title>Fast Facts</title>
   </head>
 
@@ -46,11 +53,39 @@
             />
           </div>
         </div>
+
+        <div class="personal-links">
+          <a href="https://github.com/patschramm/Fast-Facts" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/patrick-schramm-a54426216/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
       </div>
     </div>
 
+    <div class="instructions">
+      <p> 
+        <i><strong>Welcome to Fast Facts!</strong></i>
+        <br>
+        <br>
+        Fast Facts is web application aimed to provide users with visualizations based on nutritional information between international food chains by country.
+        <br>
+        <br>
+        <strong>Instructions:</strong>
+        <ul>
+          <li>Use the top navigation to select a restaurant</li>
+          <li>Use the Nutritional Information menu to select a desired nutrient</li>
+          <li>Hover over bars for exact measurement</li>
+        </ul>
+      </p>
+    </div>
     <h1 class="place-header"></h1>
-    <div class="dd-positioner">
+    <div class="dd-positioner hidden">
       <div class="dropdown">
         <button class="dropbtn">Nutritional Information</button>
         <div class="dropdown-content"></div>

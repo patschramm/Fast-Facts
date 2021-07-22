@@ -1,10 +1,20 @@
+body {
+  font-family: Inter,serif;
+}
+
+
 rect:hover {
   opacity: 0.5;
 }
 
 .graphs {
-  margin-top: 5vh;
-  margin-left: 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex; 
+  justify-content: center;
+  padding-top: 60px;
+  /* margin-top: 5vh; */
+  /* margin-left: 5vw; */
 }
 
 .dropbtn {
@@ -19,6 +29,10 @@ rect:hover {
   display: flex;
   justify-content: center;
 }
+
+.hidden {
+  display: none;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -29,7 +43,7 @@ rect:hover {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 188px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -59,7 +73,7 @@ rect:hover {
   flex-direction: row;
   width: 100%;
   justify-content: center;
-
+  padding-right: 65px;
 }
 
 .logo-wrapper {
@@ -71,11 +85,13 @@ rect:hover {
 .logo {
   width: 60px;
   height: 60px;
+  transition: 100ms ease-in;
 }
 
 .logo:hover {
   cursor: pointer;
   opacity: 0.8;
+  transform: scale(1.25);
 }
 
 .navbar {
@@ -91,16 +107,47 @@ rect:hover {
 
 .navbar-wrapper {
   width: 100vw;
+  height: 90px;
   margin-bottom: 24px;
   border-bottom: 2px solid rgba(182, 182, 182, 0.541);
 }
 
 .place-header {
   margin: 0 auto;
+  margin-bottom: 16px;
   max-width: 1400px;
   text-align: center;
 }
 
 .main-logo {
-  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  cursor: pointer;
+  height: 100%;
+  font-style: italic;
+  font-weight: 600;
+  color: #222222;
+}
+
+.personal-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fab {
+  margin: 0 12px;
+  color: black;
+  transition: 100ms ease-in;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+.instructions {
+  max-width: 1400px;
+  margin: 0 auto;
 }
