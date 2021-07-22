@@ -52,6 +52,7 @@ const placeHeader = document.querySelector(".place-header");
 
 const mcdonalds = document.querySelector(".mc");
 const bk = document.querySelector(".bk");
+const tb = document.querySelector(".tb");
 
 mcdonalds.addEventListener("click", () => {
 	resetGraphs();
@@ -109,6 +110,36 @@ bk.addEventListener("click", () => {
 
   sugar = d3.csv(
     "https://gist.githubusercontent.com/patschramm/2001665bd5545c3221fe7821b75f3054/raw/bf672e70db5d7181f1d3a00df0c4f854d828a5fb/bksugar.csv",
+    d3.autoType
+  );
+});
+
+tb.addEventListener("click", () => {
+  resetGraphs();
+  placeHeader.textContent = "Taco Baco";
+  console.log("calories", calories);
+  calories = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/f3c610960b55916d80404074f99b01d8/raw/6b170f04cfb81f72a6ed3409e0e70c94710746c7/tbcalories.csv",
+    d3.autoType
+  );
+
+  carbs = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/f3c610960b55916d80404074f99b01d8/raw/6b170f04cfb81f72a6ed3409e0e70c94710746c7/tbcarbs.csv",
+    d3.autoType
+  );
+
+  fat = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/f3c610960b55916d80404074f99b01d8/raw/6b170f04cfb81f72a6ed3409e0e70c94710746c7/tbfat.csv",
+    d3.autoType
+  );
+
+  protein = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/f3c610960b55916d80404074f99b01d8/raw/6b170f04cfb81f72a6ed3409e0e70c94710746c7/tbprotein.csv",
+    d3.autoType
+  );
+
+  sugar = d3.csv(
+    "https://gist.githubusercontent.com/patschramm/f3c610960b55916d80404074f99b01d8/raw/6b170f04cfb81f72a6ed3409e0e70c94710746c7/tbsugar.csv",
     d3.autoType
   );
 });
